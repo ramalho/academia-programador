@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Tabela Windows 1252</title>
+
+		<meta http-equiv="Content-type"
+                      content="text/html; charset=windows-1252" />
+
+
+	</head>
+
+	<body lang="pt-br">
+		<h1>Tabela Windows 1252</h1>
+
+		<table border="1">
+			<tr>
+				<th>decimal</th><th>caractere</th>
+			</tr>
+			<!--corpo da tabela-->
+			<tr>
+				<td>65</td><td>A</td>
+			</tr>
+                        <script>
+				for (var i=32; i<256; i++) {
+					document.write("<tr><td>");
+					document.write(i);
+					document.write("</td><td>");
+					document.write(String.fromCharCode(i));
+					document.write("</td></tr>");
+				}
+		        </script>
+		</table>
+
+	</body>
+
+</html>
+

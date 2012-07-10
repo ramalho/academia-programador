@@ -1,0 +1,5 @@
+Hoje é o dia 10 de julho de 2012.
+Este é um arquivo de texto que vamos dissecar.
+
+FIM
+
