@@ -5,8 +5,7 @@
 		<title>Tabela Windows 1252</title>
 
 		<meta http-equiv="Content-type"
-                      content="text/html; charset=windows-1252" />
-
+			  content="text/html; charset=windows-1252" />
 
 	</head>
 
@@ -15,21 +14,35 @@
 
 		<table border="1">
 			<tr>
-				<th>decimal</th><th>caractere</th>
+				<th>decimal</th><th>hexadecimal</th><th>caractere</th>
 			</tr>
 			<!--corpo da tabela-->
-			<tr>
-				<td>65</td><td>A</td>
-			</tr>
-                        <script>
+			<script>
+				// coleção de caracteres que a MS enxertou no ISO-8859-1
+				var puxadinho = {
+					128: '\u20ac',                130: '\u201a', 131: '\u0192', 
+					132: '\u201e', 133: '\u2026', 134: '\u2020', 135: '\u2021', 
+					136: '\u02c6', 137: '\u2030', 138: '\u0160', 139: '\u2039', 
+					140: '\u0152',                142: '\u017d', 
+					               145: '\u2018', 146: '\u2019', 147: '\u201c', 
+					148: '\u201d', 149: '\u2022', 150: '\u2013', 151: '\u2014', 
+					152: '\u02dc', 153: '\u2122', 154: '\u0161', 155: '\u203a', 
+					156: '\u0153',                158: '\u017e', 159: '\u0178'
+				}
 				for (var i=32; i<256; i++) {
 					document.write("<tr><td>");
 					document.write(i);
 					document.write("</td><td>");
-					document.write(String.fromCharCode(i));
+					document.write(i.toString(16));
+					document.write("</td><td>");
+					if (puxadinho[i]) {
+						document.write(puxadinho[i]);
+					} else {
+						document.write(String.fromCharCode(i));
+					}
 					document.write("</td></tr>");
 				}
-		        </script>
+	        </script>
 		</table>
 
 	</body>
