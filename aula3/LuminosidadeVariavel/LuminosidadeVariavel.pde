@@ -13,17 +13,21 @@ void setup() {
   for (int x=0; x<9; x++) {
     pinMode(led[x], OUTPUT);     
   }
+  Serial.begin(9600);
 }
 
 void loop() {
   luminosidade = analogRead(LDR);
-  int ledsParaLigar = map(luminosidade, 0, 750, 0, 9);
-  for (int x=0; x<ledsParaLigar; x++) {
+  int ledsParaLigar = map(luminosidade, 450, 1000, 0, 8);
+  Serial.print(luminosidade, DEC);
+  Serial.print("->");
+  Serial.println(ledsParaLigar, DEC);
+  for (int x=0; x<=ledsParaLigar; x++) {
     digitalWrite(led[x], HIGH);
-    delay(100);
   }
-  for (int x=0; x<ledsParaLigar; x++) {
+  delay(100);
+  for (int x=0; x<=ledsParaLigar; x++) {
     digitalWrite(led[x], LOW);
-    delay(100);
+    //delay(100);
   }
 }
