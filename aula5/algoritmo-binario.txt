@@ -1,0 +1,14 @@
+﻿================================================================
+Algoritmo para conversão de número decimal para base 2 (binário)
+================================================================
+
+1. Anote o número decimal N
+2. Divida N por 2
+3. Anote o resto (0 ou 1) em outra parte do papel
+4. Se o quociente do passo 2 é maior ou igual a 2:
+4.1. Anote o quociente como novo valor de N
+4.2. Repita a partir do passo 2, anotando cada novo resto à 
+     esquerda do resto anterior
+5. Se o quociente do passo 2 não é maior ou igual a 2:
+5.1. Anote o quociente à esquerda do resto já anotado
+6. Ao final, o número binário estará anotado na sequencia de restos
