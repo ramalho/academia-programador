@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+<h1>Conversão binária</h1>
+<pre>
+<script type="text/javascript">
+var q = 15;
+document.writeln("decimal:", q);
+var binario = "";
+while (q >= 2) {
+	var resto = q % 2; // operador modulo=resto
+	q = Math.floor(q / 2);
+	binario = resto.toString() + binario;
+}
+binario = q.toString() + binario;
+document.writeln("binario:",binario);
+</script>
+</pre>
+</body>
+</html>
+
+
+
+
+
