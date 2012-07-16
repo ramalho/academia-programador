@@ -1,10 +1,9 @@
 /*
   SequenciaLeds
   
-  Acender os LEDs em sequencia
+  Acender os LEDs do Program-ME em sequencia
  */
  
-#define LDR 5
 int led[] = {14, 1, 2, 3, 4, 5, 8, 6, 13};
 
 void setup() {                
