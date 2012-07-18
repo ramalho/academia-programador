@@ -15,22 +15,23 @@ public class Calculadora {
 		switch (operacao) {
 			case '+':
 				resultado = x + y;
-				System.out.println("Resultado: "+resultado);
 				break;
 			case '-':
 				resultado = x - y;
-				System.out.println("Resultado: "+resultado);
 				break;
 			case '*':
 				resultado = x * y;
-				System.out.println("Resultado: "+resultado);
 				break;
 			case '/':
 				resultado = x / y;
-				System.out.println("Resultado: "+resultado);
 				break;
 			default:
-				System.out.println("Operação inválida");
+				resultado = 0;
+		}
+		if (operacao=='+' || operacao=='-' || operacao=='*' || operacao=='/' ) {
+			System.out.println("Resultado: "+resultado);
+		} else {
+			System.out.println("Operação inválida");
 		}
 	}
 }
