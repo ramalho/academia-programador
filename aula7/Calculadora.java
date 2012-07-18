@@ -11,7 +11,7 @@ public class Calculadora {
 		char operacao;
 		System.out.println("Entre com a operação + - * /:");
 		operacao = teclado.next().charAt(0);
-		
+		boolean ok = true;
 		switch (operacao) {
 			case '+':
 				resultado = x + y;
@@ -27,8 +27,9 @@ public class Calculadora {
 				break;
 			default:
 				resultado = 0;
+				ok = false;
 		}
-		if (operacao=='+' || operacao=='-' || operacao=='*' || operacao=='/' ) {
+		if (ok) {
 			System.out.println("Resultado: "+resultado);
 		} else {
 			System.out.println("Operação inválida");
