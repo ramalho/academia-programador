@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ExemploAprova {
+public class ExemploAprova2 {
 	public static void main(String[] args) {
 		double p1;
 		double p2;
@@ -16,7 +16,15 @@ public class ExemploAprova {
 		if (media >= 5) {
 			System.out.println("Aprovado!");
 		} else {
-			System.out.println("Reprovado...");
+			System.out.print("Informe a nota da prova REC: ");
+			double rec = console.nextDouble();
+			media = (media + rec) / 2;
+			System.out.println("Media recuperação: "+media);
+			if (media >= 5) {
+				System.out.println("Aprovado!");
+			} else {
+				System.out.println("Reprovado...");
+			}
 		}
 	}
 }
