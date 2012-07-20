@@ -1,13 +1,26 @@
 import java.util.Scanner;
 
 public class Calculadora {
+	static double somar(double x, double y) {
+		return x + y;
+	} 
+	static double subtrair(double x, double y) {
+		return x - y;
+	} 
+	static double multiplicar(double x, double y) {
+		return x * y;
+	} 
+	static double dividir(double x, double y) {
+		return x / y;
+	} 
+	
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
 		double x, y, resultado;
 		System.out.println("Entre com o operando 1:");
-		x = teclado.nextInt();
+		x = teclado.nextDouble();
 		System.out.println("Entre com o operando 2:");
-		y = teclado.nextInt();
+		y = teclado.nextDouble();
 		char operacao;
 		System.out.println("Entre com a operação + - * /:");
 		operacao = teclado.next().charAt(0);
