@@ -1,0 +1,2 @@
+- receita sobr encoding de código-fonte Java e terminal no Windows e no Linux
+
