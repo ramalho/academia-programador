@@ -30,12 +30,21 @@ public class ExemploUsoArquivos {
                     System.out.println("-----------------------------------------");
                     break;
                 case '3':
+                    System.out.println("-- Apagando cliente do arquivo --------");
+                    System.out.println("Codigo do cliente: ");
+                    int idCliente = teclado.nextInt();
+                    String lixo = teclado.nextLine();
+                    // regrava arquivo sem o cliente escolhido 
+                    remove(idCliente);
+                    System.out.println("-----------------------------------------");
+                    break;
+                case '0':
 					break;
                 default:
                     System.out.println("opcao invalida");
                     break;
             }
-        } while (opcao != '3'); 
+        } while (opcao != '0'); 
     }
 
     static void montaMenu() {
@@ -43,7 +52,8 @@ public class ExemploUsoArquivos {
         System.out.println("");
         System.out.println("1 - Novo cliente");
         System.out.println("2 - Lista clientes");
-        System.out.println("3 - Finalizar");
+        System.out.println("3 - Apagar cliente");
+        System.out.println("0 - Finalizar");
         System.out.println("Digite a opcao desejada: ");
         System.out.println("");
     }
@@ -75,6 +85,22 @@ public class ExemploUsoArquivos {
 		}
 		Arquivo.fechar(original);
 		Arquivo.fechar(backup);
+	}
+
+	static void remove(int idClienteRemover) {
+		regrava(); // garantir que existe um backup completo
+        Arquivo antigo = Arquivo.abrirLeitura("clientes.bkp");
+        Arquivo novo = Arquivo.abrirEscrita("clientes.txt", "truncate");
+        String linha;
+        int idCliente = 1;
+        while ((linha = Arquivo.lerLinha(antigo)) != null) {
+			if (idCliente != idClienteRemover) {
+				Arquivo.escrever(novo, linha);
+			}
+			idCliente++;
+		}
+		Arquivo.fechar(antigo);
+		Arquivo.fechar(novo);
 	}
 }
 
