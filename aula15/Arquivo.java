@@ -228,6 +228,6 @@ public class Arquivo {
      *            arquivo que est� sendo manipulado.
      */
     private static void log(String texto, String nomeArquivo) {
-        System.out.println("log - " + nomeArquivo + " >> " + texto);
+        // System.out.println("log - " + nomeArquivo + " >> " + texto);
     }
 }
