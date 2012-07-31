@@ -5,11 +5,14 @@ public class ExemploUsoArquivos {
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        montaMenu();
-        int opcao = teclado.nextInt();
-        while (opcao != 3) {
+        String linhaOpcao;
+        char opcao;
+        do {
+            montaMenu();
+			linhaOpcao = teclado.nextLine();
+			opcao = linhaOpcao.charAt(0);
             switch (opcao) {
-                case 1:
+                case '1':
                     System.out.println("-- Inserindo clientes no arquivo --------");
                     System.out.println("Nome: ");
                     String nome = teclado.nextLine();
@@ -19,19 +22,19 @@ public class ExemploUsoArquivos {
                     grava(nome, cpf);
                     System.out.println("-----------------------------------------");
                     break;
-                case 2:
+                case '2':
                     System.out.println("-- Listando clientes do arquivo ---------");
                     // Le dados do arquivo
                     lista();
                     System.out.println("-----------------------------------------");
                     break;
+                case '3':
+					break;
                 default:
                     System.out.println("opcao invalida");
                     break;
             }
-            montaMenu();
-            opcao = teclado.nextInt();
-        }
+        } while (opcao != '3'); 
     }
 
     static void montaMenu() {
