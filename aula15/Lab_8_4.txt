@@ -1,0 +1,9 @@
+Lab 8.4
+
+Baby steps
+==========
+
+- exibir numeracao na listagem de clientes
+
+- gravar todos os dados em outro arquivo com o nome "clientes.bkp"
+

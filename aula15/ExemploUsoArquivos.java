@@ -20,6 +20,7 @@ public class ExemploUsoArquivos {
                     String cpf = teclado.nextLine();
                     // grava dados no arquivo
                     grava(nome, cpf);
+                    regrava();
                     System.out.println("-----------------------------------------");
                     break;
                 case '2':
@@ -56,10 +57,38 @@ public class ExemploUsoArquivos {
     static void lista() {
         Arquivo a = Arquivo.abrirLeitura("clientes.txt");
         String linha;
+        int idCliente = 1;
         while ((linha = Arquivo.lerLinha(a)) != null) {
             String[] dados = Arquivo.separaTokens(linha, "|");
-            System.out.println("Cliente: " + dados[1] + ", CPF: " + dados[0]);
+            System.out.println(idCliente + " Nome: " + dados[1] + ", CPF: " + dados[0]);
+            idCliente++;
         }
         Arquivo.fechar(a);
     }
+
+	static void regrava() {
+        Arquivo original = Arquivo.abrirLeitura("clientes.txt");
+        Arquivo backup = Arquivo.abrirEscrita("clientes.bkp", "truncate");
+        String linha;
+        while ((linha = Arquivo.lerLinha(original)) != null) {
+			Arquivo.escrever(backup, linha);
+		}
+		Arquivo.fechar(original);
+		Arquivo.fechar(backup);
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
