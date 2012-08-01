@@ -14,7 +14,7 @@ public class Server {
 			Socket s = server.accept();
 			output = new OutputStreamWriter(s.getOutputStream());
 			writer = new BufferedWriter(output);
-			writer.write("Academia do Programador 2012\n");
+			writer.write("Servidor do instrutor\n");
 			writer.flush();
 			writer.close();
 		}
