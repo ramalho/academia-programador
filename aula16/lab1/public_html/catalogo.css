@@ -1,0 +1,18 @@
+th {
+	background: #888;
+	color: #fff;
+	font-family: Arial;
+	font-size: 120%;
+	text-align: left; 
+	padding: 3px;
+	}
+th.topo-tabela {
+	background: #000;
+	font-size: 170%;
+	padding: 20px;
+	}
+td {
+	color: #858495;
+	background: #eee;
+	font-family: Times;
+}
