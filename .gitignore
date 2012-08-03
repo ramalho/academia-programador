@@ -7,3 +7,6 @@
 
 # Python
 *.pyc
+
+# etc
+*.sqlite
