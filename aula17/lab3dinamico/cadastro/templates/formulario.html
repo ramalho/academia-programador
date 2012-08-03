@@ -1,0 +1,28 @@
+<html>
+	<body>
+	<h1>Cadastro de cliente</h1>
+	<form action="/cad/form" method="post">
+		{% csrf_token %}
+		<fieldset>
+			<legend>Dados do cliente</legend>
+			
+			<label for="nome">Nome completo</label>
+			<input type="text" name="nome" title="Nome sem abreviaturas">
+			<br>
+
+			<label for="email">E-mail</label>
+			<input type="text" name="email">
+			<br>
+			
+			<label for="boletim">Deseja receber boletim?</label>
+			<input type="checkbox" name="boletim">
+			<br>
+			
+			<input type="submit" value="Cadastrar">
+
+		</fieldset>
+	
+	</form>
+	</body>
+	
+</html>

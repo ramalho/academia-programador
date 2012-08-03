@@ -1,0 +1,20 @@
+<html>
+	<body>
+	<h1>Listagem de clientes</h1>
+
+	<table>
+		<tr>
+			<th>Nome</th><th>E-mail</th><th>Boletim?</th>
+		</tr>
+		{% for cliente in clientes %}
+		<tr>
+			<td>{{cliente.nome}}</td>
+			<td>{{cliente.email}}</td>
+			<td>{{cliente.boletim}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+
+	</body>
+	
+</html>
