@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>
+	Módulo 4, Lab. 6.10b
+	</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<script>
+		function testarBissexto(valor) {
+			var numero = parseInt(valor, 10);
+			var msg;
+			if (isNaN(numero)) {
+				msg = valor + " não parece um ano.";
+			} else { 
+				if ((numero % 400)==0 || ((numero % 4)==0 && (numero % 100)!=0)) {
+					msg = numero +" é bissexto.";
+				} else {
+					msg = numero +" não é bissexto.";
+				}
+			}
+			var resultado = document.getElementById("resultado");
+			resultado.innerHTML = msg;
+			return true;
+		}	
+	</script>
+</head>
+<body>
+	<h1>Módulo 4, Lab. 6.10b</h1>
+	<p>Digite um ano:</p>
+	<input id="numero" onkeyup="testarBissexto(this.value)">
+	<span id="resultado"></span>
+</body>
+</html>
