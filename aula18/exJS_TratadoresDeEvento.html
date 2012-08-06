@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>
+	Exemplo Tratadores de Evento
+	</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<!-- Estes eventos são executados quando a página for carregada e descarregada-->
+</head>
+<body onload="alert('onload')" onunload="alert('onunload')">
+
+	<h1>Exemplo dos Tratadores de Evento</h1>
+
+	<!-- Este evento será executado quando o usuário clicar no link -->
+	<p><a href="/outrapagina" onclick="alert('onclick')">Quero ver outra página</a></p>
+
+	<!-- Este evento será executado quando o formulário for submetido -->
+	<form name="form1" method="post" action="/outrapag"
+		  onsubmit="alert('onsubmit')" onreset="alert('onreset')">
+		<p>Nome
+			<!-- Este evento será executado quando o usuário digitar uma tecla no input -->
+			<input type="text" name="textfield" onkeypress="alert('onkeypress')">
+		</p>
+		<p>Cidade
+		</p>
+			<!-- Este evento será executado quando o usuário selecionar um item -->
+			<select name="menu1" onchange="alert('onchange')">
+				<option value="1">São Paulo</option>
+				<option value="2">Campinas</option>
+				<option value="3">Florianópolis</option>
+				<option value="4">São Paulo</option>
+			</select>
+		<p>
+			<!-- Este evento será executado quando o usuário passar o mouse no botão -->
+			<input type="submit" name="enviar" value="Enviar" onmouseover="alert('onmouseover')">
+		</p>
+	</form>
+</body>
+</html>
