@@ -3,10 +3,10 @@ class TestePessoa2 {
 		Pessoa2 p = new Pessoa2();
 		p.nome = "Rodrigo";
 		p.sobrenome = "Monteiro";
-		p.dataNasc = new Data(1975, 12, 25);
-		//p.dataNasc.ano = 1975;
-		//p.dataNasc.mes = 12;
-		//p.dataNasc.dia = 25;
+		p.dataNasc = new Data();
+		p.dataNasc.ano = 1975;
+		p.dataNasc.mes = 12;
+		p.dataNasc.dia = 25;
 		p.rg = 11111;
 		String osTelefones[] = {"1234567", "987654321"};
 		p.telefones = osTelefones;
